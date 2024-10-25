@@ -1,0 +1,7 @@
+runtime: python39  # Define la versión de Python. Cambia a python38 si usas Python 3.8
+
+entrypoint: gunicorn -b :$PORT app:app  # Esto indica cómo ejecutar tu aplicación
+
+handlers:
+- url: /.*
+  script: auto
